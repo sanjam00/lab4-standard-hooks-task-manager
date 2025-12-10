@@ -4,13 +4,14 @@ import TaskForm from "./TaskForm";
 import SearchBar from "./SearchBar";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  // const [tasks, setTasks] = useState([]);
+  const { tasks, setTasks } = useContext(TaskContext)
 
   useEffect(() => {
     fetch('http://localhost:6001/tasks')
-    .then(r=>r.json())
-    .then(data=>setTasks(data))
-    
+      .then(r => r.json())
+      .then(data => setTasks(data))
+
   }, []);
 
   return (

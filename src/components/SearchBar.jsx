@@ -9,7 +9,6 @@ function SearchBar() {
     setQuery(e.target.value);
   }
 
-
   return (
     <div>
       <input
@@ -18,7 +17,7 @@ function SearchBar() {
         value={query}
         onChange={handleSearch}
       />
-      <TaskList query={query}/>
+      <TaskList query={query} />
     </div>
   );
 }
